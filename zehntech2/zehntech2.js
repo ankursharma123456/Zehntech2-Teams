@@ -124,7 +124,7 @@ export default class Zehntech2 extends LightningElement {
      @api position7 = '';
      @api position8 = '';
 
-     @track nameCheckBl ;
+   
      
    
      //first div show and hide of social icon
