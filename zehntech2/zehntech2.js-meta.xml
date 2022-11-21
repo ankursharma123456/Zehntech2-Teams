@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets> 
+
+     <targetConfigs>
+
+        <targetConfig targets="lightningCommunity__Default">
+        
+
+            <!-- Change the Color and Size of Name -->
+
+            <property name="namecolor" type="Color" default="Black" label="Change the font color of name" />
+
+            <property name="prev" type="Color" default="Blue" label="Navigation icon color" />
+
+            <property name="namefontsize" type="String"  label="Change the font size of name"></property>
+            <!-- Change the Color and Size of position -->
+
+            <property name="namecolor1" type="Color" default="Black" label="Change the font color of position" />
+            <property name="namefontsize1" type="String"  label="Change the font size of position"></property>
+
+             <!-- first profile -->
+            <property name="contentId" type="ContentReference" filter="cms_image" default="" label="Select image for first profile "/>
+             <!-- Clear image property -->
+            <property name="footer1" type="Boolean" label="Clear Image"/> 
+
+            <property name="name" type="String" label="Enter Name"/>
+            <property name="position" type="String"  label="Enter Position"></property>
+           
+
+            <property name="facebook" type="String" label="Enter your facbook profile url" />
+            <property name="linkdin" type="String" label="Enter your linkedin profile url" />
+            <property name="instagram" type="String" label="Enter your instagram profile Url" />
+
+            <!-- Second Profile -->
+             
+            <property name="contentId2" type="ContentReference" filter="cms_image" default="" label="Select image for second profile"/>
+             <property name="footer2" type="Boolean" label="Clear Image"/> 
+            <property name="name1" type="String" label="Enter Name"/>
+            <property name="position1" type="String"  label="Enter Position"></property>
+           
+
+             <property name="facebook1" type="String" label="Enter your facbook profile url" />
+            <property name="linkdin1" type="String" label="Enter your linkedin profile url" />
+            <property name="instagram1" type="String" label="Enter your instagram profile url" />
+           
+    <!-- third profile -->
+    
+            <property name="contentId3" type="ContentReference" filter="cms_image" default="" label="Select image for third profile"/>
+             <property name="footer3" type="Boolean" label="Clear Image"/> 
+            <property name="name2" type="String" label="Enter Name"/>
+            <property name="position2" type="String"  label="Enter Position"></property>
+          
+
+             <property name="facebook2" type="String" label="Enter your facbook profile url" />
+            <property name="linkdin2" type="String" label="Enter your linkedin profile url" />
+            <property name="instagram2" type="String" label="Enter your instagram profile url" />
+            
+<!-- four profile -->
+
+            <property name="contentId4" type="ContentReference" filter="cms_image" default="" label="Select image for profile"/>
+             <property name="footer4" type="Boolean" label="Clear Image"/> 
+            <property name="name3" type="String" label="Enter Name"/>
+            <property name="position3" type="String"  label="Enter Position"></property>
+       
+             <property name="facebook3" type="String" label="Enter your facbook profile url" />
+            <property name="linkdin3" type="String" label="Enter your linkedin profile url" />
+            <property name="instagram3" type="String" label="Enter your instagram profile url" />
+<!-- fifth profile -->
+
+            <property name="contentId5" type="ContentReference" filter="cms_image" default="" label="Select image for profile"/>
+             <property name="footer5" type="Boolean" label="Clear Image"/> 
+            <property name="name4" type="String" label="Enter Name"/>
+            <property name="position4" type="String"  label="Enter Position"></property>
+        
+
+             <property name="facebook4" type="String" label="Enter your facbook profile url" />
+            <property name="linkdin4" type="String" label="Enter your linkedin profile url" />
+            <property name="instagram4" type="String" label="Enter your instagram profile url" />
+<!-- Sixth profile -->
+
+            <property name="contentId6" type="ContentReference" filter="cms_image" default="" label="Select image for profile"/> 
+             <property name="footer6" type="Boolean" label="Clear Image"/> 
+            <property name="name5" type="String" label="Enter Name"/>
+            <property name="position5" type="String"  label="Enter Position"></property>
+          
+             <property name="facebook5" type="String" label="Enter your facbook profile url" />
+            <property name="linkdin5" type="String" label="Enter your linkedin profile url" />
+            <property name="instagram5" type="String" label="Enter your instagram profile url" />
+<!-- Seven profile -->
+
+            <property name="contentId7" type="ContentReference" filter="cms_image" default="" label="Select image for profile"/>
+             <property name="footer7" type="Boolean" label="Clear Image"/> 
+            <property name="name6" type="String" label="Enter Name"/>
+            <property name="position6" type="String"  label="Enter Position"></property>
+         
+             <property name="facebook6" type="String" label="Enter your facbook profile Url" />
+            <property name="linkdin6" type="String" label="Enter your linkedin profile Url" />
+            <property name="instagram6" type="String" label="Enter your instagram profile Url" />
+<!-- Eight profile -->
+
+            <property name="contentId8" type="ContentReference" filter="cms_image" default="" label="Select image for profile"/>
+             <property name="footer8" type="Boolean" label="Clear Image"/> 
+            <property name="name7" type="String" label="Enter Name"/>
+            <property name="position7" type="String"  label="Enter Position"></property>
+
+            <property name="facebook7" type="String" label="Enter your facbook profile url" />
+            <property name="linkdin7" type="String" label="Enter your linkedin profile url" />
+            <property name="instagram7" type="String" label="Enter your instagram profile url" />
+
+          <!-- Nine profile -->
+          <property name="contentId9" type="ContentReference" filter="cms_image" default="" label="Select image for profile"/>
+           <property name="footer9" type="Boolean" label="Clear Image"/> 
+            <property name="name8" type="String" label="Enter Name"/>
+            <property name="position8" type="String"  label="Enter Position"></property>
+
+            <property name="facebook8" type="String" label="Enter your facbook profile url" />
+            <property name="linkdin8" type="String" label="Enter your linkedin profile url" />
+            <property name="instagram8" type="String" label="Enter your instagram profile url" /> 
+           
+        </targetConfig>
+
+    </targetConfigs>
+</LightningComponentBundle>

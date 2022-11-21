@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .myContainer {
+    max-width: 1020px;
+    height: auto;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+  
+  }
+  .mySlider {
+    height: inherit;
+    border-radius : 0px;
+  
+  }
+  .mySlides {
+    width : 33% !important;
+    
+  }
+  .teams1.teams {
+    z-index: 1;
+    height: 144px;
+    margin-top: -51px;
+    width: 229px;
+    margin-left: 27px;
+    background-color: white;
+    /* box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    
+    border-radius: 8px;
+}
+.line{
+    width: 120px;
+    background-color: purple;
+    margin-left: 115px;
+    margin-top: 4px;
+    margin-bottom: -10px;
+    border: 0px solid purple;
+}
+img.userimage {
+    height: 232px;
+    width: 277px;
+    border-radius: 10px;
+}
+.icon{
+
+  margin-left: 67px;
+}
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 11px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.4 s ease; 
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+ /* img{
+    
+  
+     border-radius: var(--my-bdradius);
+
+  }  */
+  
+  /* ---------change the color and size--------  */
+.name {
+    color: var(--my-color) !important;
+    font-size: var(--my-size);
+}
+.position{
+  /* font-size: 14px; */
+  color: var(--my-color1) !important;
+  font-size: var(--my-size1);    
+}
+
+.socialLink>img{
+  height: var(--my-size3);
+
+}
+  
+
+a.prev {
+  color: var(--my-prev);
+}
+
+
+a.next {
+  color: var(--my-prev);
+}
+
+
+lightning-card.slds-card {
+  border: none;
+ 
+}
+/* article.slds-card {
+  border-radius: 15px;
+} */
+
+
+
+/* responsive */
+
+
+@media screen and (min-width: 320px) and (max-width: 374px){
+  .myContainer {
+    max-width: 284px;
+  }
+
+  .mySlides{
+    width: 332px !important;
+}
+
+p.slds-var-m-bottom_xx-small.aa {
+  font-size: 11px;
+}
+
+}
+
+
+@media screen and (min-width:375px) and (max-width:425px ) {
+  .myContainer {
+    max-width: 340px;
+  }
+  .mySlides{
+    width: 364px !important;
+}
+.prev{
+  margin-left: -2px;
+    z-index: 1;
+}
+}
+
+/* @media screen and (min-width:375px) and (max-width:667px ) {
+ 
+  a.next[Appraisal-zehntech1_zehntech1] {
+   
+    margin-right: 0px;
+}
+} */
+
+
+
+@media screen and (min-width:426px) and (max-width:768px ){
+
+  .myContainer[Appraisal-zehntech2_zehntech2] {
+    max-width: 732px;
+    height: auto;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.mySlides[Appraisal-zehntech2_zehntech2] {
+  width: 50% !important;
+}
+
+}
+
+@media screen and (min-width:769px) and (max-width:1024px ){
+  .myContainer[Appraisal-zehntech2_zehntech2] {
+    max-width: 980px;
+    height: auto;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+.mySlides[Appraisal-zehntech2_zehntech2] {
+    width: 33% !important;
+    margin-left: 3px;
+    /* padding: 0px 0px 0px 0; */
+}
+}
+
+
+@media screen and (min-width:1025px) and (max-width:1440px ){
+  .myContainer[Appraisal-zehntech2_zehntech2] {
+    max-width: 1050px !important;
+    height: auto !important;
+    position: relative !important;
+    /* margin: 0px 0px 0px 100px; */
+    /* margin-left: 61px; */
+    /* margin: auto; */
+    overflow: hidden !important ;
+  }
+  
+  .mySlides[Appraisa2-zehntech2_zehntech2] {
+    width: 358px !important;
+  }
+}

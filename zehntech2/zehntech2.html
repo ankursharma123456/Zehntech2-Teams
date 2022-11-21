@@ -1,0 +1,723 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="12" padding="around-small">
+            <a class="prev" style="margin-left: 80px;" onclick={previous}>&#10094;</a>
+            <!-- Container -->
+          
+            <div class="myContainer">
+                <div data-id="firstDiv" class="mySlider slds-grid slds-gutters">
+                    <!-- first User Card -->
+                    <template if:true={imageOptn}>
+                        <div class="mySlides  slds-col slds-size_1-of-4 ">
+                            <template if:true={firstdive}>
+                                <lightning-card>
+                                    <div class="slds-var-p-horizontal_small ">
+                                        <div class="slds-grid slds-grid_vertical">
+                                            <div class="slds-col image">
+
+
+                                                <template if:false={footer1}>
+                                                    <span>
+                                                        <img src={imageUrl} class="userimage" />
+                                                    </span>
+                                                </template>
+
+                                                <template if:true={footer1}>
+                                                    <img src="https://zehntech-dev-ed--appraisal.vf.force.com/resource/1665050154000/Appraisal__Man"
+                                                        class="userimage" />
+
+                                                </template>
+                                            </div>
+                                            <div class="slds-col">
+                                                <span>
+                                                    <lightning-card>
+                                                        <div class="teams1 teams">
+                                                            <div class="slds-grid slds-grid_vertical"
+                                                                style="height:200px;">
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin-top :18px;">
+                                                                    <!-- <span>Social Media </span> -->
+                                                                    <div class="icon">
+                                                                        <ul class="slds-list_horizontal">
+                                                                            <li>
+                                                                                <template if:true={firstfacebook}>
+                                                                                    <a href={facebook}><img
+                                                                                            src={facebookicon}
+                                                                                            style="width: 20px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={firstInsta}>
+                                                                                    <a href={instagram}><img
+                                                                                            src={instagramicon}
+                                                                                            style="width: 20px; margin-right:7px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={firstLinkedin}>
+                                                                                    <a href={linkdin}><img
+                                                                                            src={linkdinicon}
+                                                                                            style="width: 18px;  margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin:-71px;">
+                                                                    <span class="name" onchange={check}>{name}</span>
+                                                                    <hr class="line">
+                                                                </div>
+                                                            
+                                                                <div class="slds-col" style="text-align: center;">
+                                                                    <span class="position">{position}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </lightning-card>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </lightning-card>
+                            </template>
+
+                        </div>
+                    </template>
+                    <!-- Second  User Card -->
+                    <template if:true={imageOptn1}>
+                        <div class="mySlides  slds-col slds-size_1-of-4" style="color:black">
+                            <template if:true={seconddiv}>
+                                <lightning-card>
+                                    <div class="slds-var-p-horizontal_small ">
+                                        <div class="slds-grid slds-grid_vertical">
+                                            <div class="slds-col image">
+                                                <template if:false={footer2}>
+                                                    <span>
+                                                        <img src={imageUrl2} class="userimage" />
+                                                    </span>
+                                                </template>
+
+                                                <template if:true={footer2}>
+                                                    <img src="https://zehntech-dev-ed--appraisal.vf.force.com/resource/1665050154000/Appraisal__Man"
+                                                        class="userimage" />
+
+                                                </template>
+                                                <!-- <span> <img src={imageUrl2} class="userimage" />
+                                                </span> -->
+
+                                            </div>
+                                            <div class="slds-col">
+                                                <span>
+                                                    <lightning-card>
+                                                        <div class="teams1 teams">
+                                                            <div class="slds-grid slds-grid_vertical"
+                                                                style="height:200px;">
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin-top :18px;">
+                                                                    <div class="icon">
+                                                                        <ul class="slds-list_horizontal">
+                                                                            <li>
+                                                                                <template if:true={secondfacebook}>
+                                                                                    <a href={facebook1}><img
+                                                                                            src={facebookicon}
+                                                                                            style="width: 20px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={secondinstagram}>
+                                                                                    <a href={instagram1}><img
+                                                                                            src={instagramicon}
+                                                                                            style="width: 20px; margin-right:7px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={secondlinkedin}>
+                                                                                    <a href={linkdin1}><img
+                                                                                            src={linkdinicon}
+                                                                                            style="width: 18px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin:-71px;">
+                                                                    <span class="name" onchange={check}>{name1} </span>
+                                                                    <hr class="line">
+                                                                </div>
+                                                                <div class="slds-col" style="text-align: center;">
+                                                                    <span class="position">{position1}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </lightning-card>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </lightning-card>
+                            </template>
+
+                        </div>
+                    </template>
+
+                    <!-- third  User Card-->
+                    <template if:true={imageOptn2}>
+                        <div class="mySlides  slds-col slds-size_1-of-4" style="color:black">
+                            <template if:true={thirddiv}>
+                                <lightning-card>
+                                    <div class="slds-var-p-horizontal_small ">
+                                        <div class="slds-grid slds-grid_vertical">
+                                            <div class="slds-col image">
+                                                <template if:false={footer3}>
+                                                    <span>
+                                                        <img src={imageUrl3} class="userimage" />
+                                                    </span>
+                                                </template>
+
+                                                <template if:true={footer3}>
+                                                    <img src="https://zehntech-dev-ed--appraisal.vf.force.com/resource/1665050154000/Appraisal__Man"
+                                                        class="userimage" />
+
+                                                </template>
+
+                                                <!-- <span> <img src={imageUrl3} class="userimage" />
+                                                </span> -->
+                                            </div>
+                                            <div class="slds-col">
+                                                <span>
+                                                    <lightning-card>
+                                                        <div class="teams1 teams">
+                                                            <div class="slds-grid slds-grid_vertical"
+                                                                style="height:200px;">
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin-top :18px;">
+                                                                    <div class="icon">
+                                                                        <ul class="slds-list_horizontal">
+                                                                            <li>
+                                                                                <template if:true={thirdfacebook}>
+                                                                                    <a href={facebook2}><img
+                                                                                            src={facebookicon}
+                                                                                            style="width: 20px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={thirdinsta}>
+                                                                                    <a href={instagram2}><img
+                                                                                            src={instagramicon}
+                                                                                            style="width: 20px; margin-right:7px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={thirdlinkedin}>
+                                                                                    <a href={linkdin2}><img
+                                                                                            src={linkdinicon}
+                                                                                            style="width: 18px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin:-71px;">
+                                                                    <span class="name" onchange={check}>{name2} </span>
+                                                                    <hr class="line">
+                                                                </div>
+                                                                <div class="slds-col" style="text-align: center;">
+                                                                    <span class="position">{position2}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </lightning-card>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </lightning-card>
+                            </template>
+
+                        </div>
+                    </template>
+                    <!-- Four  User Card -->
+                    <template if:true={imageOptn3}>
+                        <div class="mySlides  slds-col slds-size_1-of-4" style="color:black">
+                            <template if:true={fourdiv}>
+                                <lightning-card>
+                                    <div class="slds-var-p-horizontal_small ">
+                                        <div class="slds-grid slds-grid_vertical">
+                                            <div class="slds-col image">
+                                                <template if:false={footer4}>
+                                                    <span>
+                                                        <img src={imageUrl4} class="userimage" />
+                                                    </span>
+                                                </template>
+
+                                                <template if:true={footer4}>
+                                                    <img src="https://zehntech-dev-ed--appraisal.vf.force.com/resource/1665050154000/Appraisal__Man"
+                                                        class="userimage" />
+
+                                                </template>
+                                                <!-- <span> <img src={imageUrl4} class="userimage" />
+                                                </span> -->
+                                            </div>
+                                            <div class="slds-col">
+                                                <span>
+                                                    <lightning-card>
+                                                        <div class="teams1 teams">
+                                                            <div class="slds-grid slds-grid_vertical"
+                                                                style="height:200px;">
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin-top :18px;">
+                                                                    <div class="icon">
+                                                                        <ul class="slds-list_horizontal">
+                                                                            <li>
+                                                                                <template if:true={fourfacebook}>
+                                                                                    <a href={facebook3}><img
+                                                                                            src={facebookicon}
+                                                                                            style="width: 20px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={fourinsta}>
+                                                                                    <a href={instagram3}><img
+                                                                                            src={instagramicon}
+                                                                                            style="width: 20px; margin-right:7px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={fourlinkedin}>
+                                                                                    <a href={linkdin3}><img
+                                                                                            src={linkdinicon}
+                                                                                            style="width: 18px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin:-71px;">
+                                                                    <span class="name" onchange={check}>{name3} </span>
+                                                                    <hr class="line">
+                                                                </div>
+                                                                <div class="slds-col" style="text-align: center;">
+                                                                    <span class="position">{position3}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </lightning-card>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </lightning-card>
+                            </template>
+
+                        </div>
+                    </template>
+                    <!-- fifth  User Card -->
+                    <template if:true={imageOptn4}>
+                        <div class="mySlides  slds-col slds-size_1-of-4" style="color:black">
+                            <template if:true={fivediv}>
+                                <lightning-card>
+                                    <div class="slds-var-p-horizontal_small ">
+                                        <div class="slds-grid slds-grid_vertical">
+                                            <div class="slds-col image">
+
+                                                <template if:false={footer5}>
+                                                    <span>
+                                                        <img src={imageUrl5} class="userimage" />
+                                                    </span>
+                                                </template>
+
+                                                <template if:true={footer5}>
+                                                    <img src="https://zehntech-dev-ed--appraisal.vf.force.com/resource/1665050154000/Appraisal__Man"
+                                                        class="userimage" />
+
+                                                </template>
+                                                <!-- <span> <img src={imageUrl5} class="userimage" />
+                                                </span> -->
+                                            </div>
+                                            <div class="slds-col">
+                                                <span>
+                                                    <lightning-card>
+                                                        <div class="teams1 teams">
+                                                            <div class="slds-grid slds-grid_vertical"
+                                                                style="height:200px;">
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin-top :18px;">
+                                                                    <div class="icon">
+                                                                        <ul class="slds-list_horizontal">
+                                                                            <li>
+                                                                                <template if:true={fivefacebook}>
+                                                                                    <a href={facebook4}><img
+                                                                                            src={facebookicon}
+                                                                                            style="width: 20px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={fiveinsta}>
+                                                                                    <a href={instagram4}><img
+                                                                                            src={instagramicon}
+                                                                                            style="width: 20px; margin-right:7px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={fivelinkedin}>
+                                                                                    <a href={linkdin4}><img
+                                                                                            src={linkdinicon}
+                                                                                            style="width: 18px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin:-71px;">
+                                                                    <span class="name">{name4} </span>
+                                                                    <hr class="line">
+                                                                </div>
+                                                                <div class="slds-col" style="text-align: center;">
+                                                                    <span class="position">{position4}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </lightning-card>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </lightning-card>
+                            </template>
+
+                        </div>
+                    </template>
+                    <!-- Six  User Card -->
+                    <template if:true={imageOptn5}>
+                        <div class="mySlides  slds-col slds-size_1-of-4" style="color:black">
+                            <template if:true={sixdiv}>
+                                <lightning-card>
+                                    <div class="slds-var-p-horizontal_small ">
+                                        <div class="slds-grid slds-grid_vertical">
+                                            <div class="slds-col image">
+
+                                                <template if:false={footer6}>
+                                                    <span>
+                                                        <img src={imageUrl6} class="userimage" />
+                                                    </span>
+                                                </template>
+
+                                                <template if:true={footer6}>
+                                                    <img src="https://zehntech-dev-ed--appraisal.vf.force.com/resource/1665050154000/Appraisal__Man"
+                                                        class="userimage" />
+
+                                                </template>
+                                                <!-- <span> <img src={imageUrl6} class="userimage" />
+                                                </span> -->
+                                            </div>
+                                            <div class="slds-col">
+                                                <span>
+                                                    <lightning-card>
+                                                        <div class="teams1 teams">
+                                                            <div class="slds-grid slds-grid_vertical"
+                                                                style="height:200px;">
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin-top :18px;">
+                                                                    <div class="icon">
+                                                                        <ul class="slds-list_horizontal">
+                                                                            <li>
+                                                                                <template if:true={sixfacebook}>
+                                                                                    <a href={facebook5}><img
+                                                                                            src={facebookicon}
+                                                                                            style="width: 20px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={sixinsta}>
+                                                                                    <a href={instagram5}><img
+                                                                                            src={instagramicon}
+                                                                                            style="width: 20px; margin-right:7px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={sixlinkedin}>
+                                                                                    <a href={linkdin5}><img
+                                                                                            src={linkdinicon}
+                                                                                            style="width: 18px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin:-71px;">
+                                                                    <span class="name">{name5}</span>
+                                                                    <hr class="line">
+                                                                </div>
+                                                                <div class="slds-col" style="text-align: center;">
+                                                                    <span class="position">{position5}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </lightning-card>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </lightning-card>
+                            </template>
+
+                        </div>
+                    </template>
+                    <!-- Seven  User Card -->
+                    <template if:true={imageOptn6}>
+                        <div class="mySlides asd slds-col slds-size_1-of-4" style="color:black">
+                            <template if:true={sevendiv}>
+                                <lightning-card>
+                                    <div class="slds-var-p-horizontal_small ">
+                                        <div class="slds-grid slds-grid_vertical">
+                                            <div class="slds-col image">
+
+                                                <template if:false={footer7}>
+                                                    <span>
+                                                        <img src={imageUrl7} class="userimage" />
+                                                    </span>
+                                                </template>
+
+                                                <template if:true={footer7}>
+                                                    <img src="https://zehntech-dev-ed--appraisal.vf.force.com/resource/1665050154000/Appraisal__Man"
+                                                        class="userimage" />
+
+                                                </template>
+                                                <!-- <span> <img src={imageUrl7} class="userimage" />
+                                                </span> -->
+                                            </div>
+                                            <div class="slds-col">
+                                                <span>
+                                                    <lightning-card>
+                                                        <div class="teams1 teams">
+                                                            <div class="slds-grid slds-grid_vertical"
+                                                                style="height:200px;">
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin-top :18px;">
+                                                                    <div class="icon">
+                                                                        <ul class="slds-list_horizontal">
+                                                                            <li>
+                                                                                <template if:true={sevenfacebook}>
+                                                                                    <a href={facebook6}><img
+                                                                                            src={facebookicon}
+                                                                                            style="width: 20px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={seveninsta}>
+                                                                                    <a href={instagram6}><img
+                                                                                            src={instagramicon}
+                                                                                            style="width: 20px; margin-right:7px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={sevenlinkedin}>
+                                                                                    <a href={linkdin7}><img
+                                                                                            src={linkdinicon}
+                                                                                            style="width: 18px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin:-71px;">
+                                                                    <span class="name">{name6} </span>
+                                                                    <hr class="line">
+                                                                </div>
+                                                                <div class="slds-col" style="text-align: center;">
+                                                                    <span class="position">{position6}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </lightning-card>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </lightning-card>
+                            </template>
+
+                        </div>
+                    </template>
+                    <!-- Eight  User Card -->
+                    <template if:true={imageOptn7}>
+                        <div class="mySlides as  slds-col slds-size_1-of-4" style="color:black">
+                            <template if:true={eightdiv}>
+                                <lightning-card>
+                                    <div class="slds-var-p-horizontal_small ">
+                                        <div class="slds-grid slds-grid_vertical">
+                                            <div class="slds-col image">
+                                                <template if:false={footer8}>
+                                                    <span>
+                                                        <img src={imageUrl8} class="userimage" />
+                                                    </span>
+                                                </template>
+
+                                                <template if:true={footer8}>
+                                                    <img src="https://zehntech-dev-ed--appraisal.vf.force.com/resource/1665050154000/Appraisal__Man"
+                                                        class="userimage" />
+
+                                                </template>
+                                                <!-- <span> <img src={imageUrl8} class="userimage" />
+                                                </span> -->
+                                            </div>
+                                            <div class="slds-col">
+                                                <span>
+                                                    <lightning-card>
+                                                        <div class="teams1 teams">
+                                                            <div class="slds-grid slds-grid_vertical"
+                                                                style="height:200px;">
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin-top :18px;">
+                                                                    <div class="icon">
+                                                                        <ul class="slds-list_horizontal">
+                                                                            <li>
+                                                                                <template if:true={eightfacebook}>
+                                                                                    <a href={facebook7}><img
+                                                                                            src={facebookicon}
+                                                                                            style="width: 20px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={eightinsta}>
+                                                                                    <a href={instagram7}><img
+                                                                                            src={instagramicon}
+                                                                                            style="width: 20px; margin-right:7px;"></a>
+                                                                                </template>
+
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={eightlinkedin}>
+                                                                                    <a href={linkdin7}><img
+                                                                                            src={linkdinicon}
+                                                                                            style="width: 18px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin:-71px;">
+                                                                    <span class="name">{name7} </span>
+                                                                    <hr class="line">
+                                                                </div>
+                                                                <div class="slds-col" style="text-align: center;">
+                                                                    <span class="position">{position7}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </lightning-card>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </lightning-card>
+                            </template>
+                        </div>
+                    </template>
+                    <!-- nine  User Card -->
+                    <template if:true={imageOptn8}>
+                        <div class="mySlides aaaa slds-col slds-size_1-of-4" style="color:black">
+                            <template if:true={ninediv}>
+                                <lightning-card>
+                                    <div class="slds-var-p-horizontal_small ">
+                                        <div class="slds-grid slds-grid_vertical">
+                                            <div class="slds-col image">
+                                                <template if:false={footer9}>
+                                                    <span>
+                                                        <img src={imageUrl9} class="userimage" />
+                                                    </span>
+                                                </template>
+
+                                                <template if:true={footer9}>
+                                                    <img src="https://zehntech-dev-ed--appraisal.vf.force.com/resource/1665050154000/Appraisal__Man"
+                                                        class="userimage" />
+
+                                                </template>
+                                                <!-- <span> <img src={imageUrl9} class="userimage" />
+                                                </span> -->
+                                            </div>
+                                            <div class="slds-col">
+                                                <span>
+                                                    <lightning-card>
+                                                        <div class="teams1 teams">
+                                                            <div class="slds-grid slds-grid_vertical"
+                                                                style="height:200px;">
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin-top :18px;">
+                                                                    <div class="icon">
+                                                                        <ul class="slds-list_horizontal">
+                                                                            <li>
+                                                                                <template if:true={ninefacebook}>
+                                                                                    <a href={facebook8}><img
+                                                                                            src={facebookicon}
+                                                                                            style="width: 20px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={nineinsta}>
+                                                                                    <a href={instagram8}><img
+                                                                                            src={instagramicon}
+                                                                                            style="width: 20px; margin-right:7px;"></a>
+                                                                                </template>
+
+                                                                            </li>
+                                                                            <li>
+                                                                                <template if:true={ninelinkedin}>
+                                                                                    <a href={linkdin8}><img
+                                                                                            src={linkdinicon}
+                                                                                            style="width: 18px; margin-right:5px;"></a>
+                                                                                </template>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slds-col"
+                                                                    style="text-align: center; margin:-71px;">
+                                                                    <span class="name">{name8} </span>
+                                                                    <hr class="line">
+                                                                </div>
+                                                                <div class="slds-col" style="text-align: center;">
+                                                                    <span class="position">{position8}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </lightning-card>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </lightning-card>
+                            </template>
+
+                        </div>
+                    </template>
+
+                </div>
+
+                <!-- Next and previous buttons -->
+
+
+            </div>
+        
+            <a class="next" style="margin-right:90px" onclick={next}>&#10095;</a>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
